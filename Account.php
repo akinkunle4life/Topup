@@ -68,7 +68,7 @@
 				$varCode=mt_rand(2000,9000);
 
 
-		       $sql="INSERT INTO subscribers (sFname,sLname,sEmail,sPhone,sPass,sState,sType,sApiKey,sReferal,sPin,sVerCode,sRegStatus)VALUES(:fname,:lname,:email,:phone,:pass,:s,:a,:k,:ref,:pin,:code,3)";
+		       $sql="INSERT INTO subscribers (sFname,sLname,sEmail,sPhone,sPass,sState,sType,sApiKey,sReferal,sPin,sVerCode,sRegStatus)VALUES(:fname,:lname,:email,:phone,:pass,:s,:a,:k,:ref,:pin,:code,0)";
 
 		       $query = $dbh->prepare($sql);
 
@@ -557,5 +557,6 @@
 	      	
 
 	}
+
 
 ?>
