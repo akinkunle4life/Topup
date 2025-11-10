@@ -63,12 +63,12 @@
 	      	//Insert And Register Member
 	      	else{
 			   
-				$hash=substr(sha1(md5($password)), 0, 10);
+				$hash=substr(sha1(md5($password)), 3, 10);
 				$apiKey = substr(str_shuffle("0123456789ABCDEFGHIJklmnopqrstvwxyzAbAcAdAeAfAgAhBaBbBcBdC1C23C3C4C5C6C7C8C9xix2x3"), 0, 60).time();
 				$varCode=mt_rand(2000,9000);
 
 
-		       $sql="INSERT INTO subscribers (sFname,sLname,sEmail,sPhone,sPass,sState,sType,sApiKey,sReferal,sPin,sVerCode,sRegStatus)VALUES(:fname,:lname,:email,:phone,:pass,:s,:a,:k,:ref,:pin,:code,3)";
+		       $sql="INSERT INTO subscribers (sFname,sLname,sEmail,sPhone,sPass,sState,sType,sApiKey,sReferal,sPin,sVerCode,sRegStatus)VALUES(:fname,:lname,:email,:phone,:pass,:s,:a,:k,:ref,:pin,:code,0)";
 
 		       $query = $dbh->prepare($sql);
 
@@ -560,3 +560,4 @@
 
 
 ?>
+
